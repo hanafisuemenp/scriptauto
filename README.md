@@ -1,8 +1,8 @@
-Automatic Script Installer by Orang
+Automatic Script Setting VPS untuk berjualan ssh
 
 ==========
 
-## Usage
+## How To Use
 ### Centos 6 (OpenVZ VPS)
 ```
 wget https://raw.github.com/arieonline/autoscript/master/centos6.sh
