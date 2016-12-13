@@ -171,7 +171,9 @@ service vnstat restart
 
 # download script
 cd /usr/bin
-wget -O speedtest "https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py"
+wget -O speedtest-cli "https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py"
+wget -O ps_mem "https://raw.githubusercontent.com/pixelb/ps_mem/master/ps_mem.py"
+wget -O bench-network.sh "https://raw.githubusercontent.com/zihadp/scriptauto/master/bench-network.sh"
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-login.sh > userlog
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/debian/cekuser.sh > cekuser
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-delete.sh > userdel
@@ -181,12 +183,14 @@ curl https://raw.githubusercontent.com/zihadp/scriptauto/master/trial.sh > trial
 echo "cat /root/log-install.txt" | tee -a info
 
 
-chmod +x speedtest
+chmod +x speedtest-cli
 chmod +x userlog
 chmod +x cekuser
 chmod +x userdel
 chmod +x usernew
 chmod +x trial
+chmod +x ps_mem
+chmod +x bench-network
 chmod +x info
 cd
 
@@ -235,7 +239,7 @@ echo ""  | tee -a log-install.txt
 echo "------------------------"  | tee -a log-install.txt
 echo "Script yang tersedia"  | tee -a log-install.txt
 echo "------------------------"  | tee -a log-install.txt
-echo "speedtest --share"  | tee -a log-install.txt
+echo "speedtest-cli --share"  | tee -a log-install.txt
 echo "usernew"  | tee -a log-install.txt
 echo "userdel"  | tee -a log-install.txt
 echo "cekuser"  | tee -a log-install.txt
