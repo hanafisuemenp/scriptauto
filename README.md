@@ -3,45 +3,13 @@ Automatic Script Setting VPS untuk berjualan ssh
 ==========
 
 ## How To Use
-### Centos 6 (OpenVZ VPS)
-```
-wget https://raw.github.com/arieonline/autoscript/master/centos6.sh
-bash centos6.sh
-```
-Tested on
-* CentOS 6 32 bit
-* CentOS 6 64 bit
-* OpenVZ only
-
-### Centos 6 (KVM VPS)
-```
-wget https://raw.github.com/arieonline/autoscript/master/centos6-kvm.sh
-bash centos6-kvm.sh
-```
-Tested on
-* CentOS 6 32 bit
-* CentOS 6 64 bit
-* KVM only
-
-### Debian 6 32bit
-```
-wget https://raw.github.com/arieonline/autoscript/master/debian6.sh
-bash debian6.sh
-```
-Tested on
-* Debian 6 32 bit
-* Debian 6 64 bit
-* OpenVZ only
 
 ### Debian 7 32bit
 ```
-wget https://raw.github.com/arieonline/autoscript/master/debian7.sh
-bash debian7.sh
+wget -O ovz-install.sh https://raw.githubusercontent.com/zihadp/scriptauto/master/ovz-install.sh && chmod +x ovz-install.sh && ./ovz-install.sh
 ```
 Tested on
 * Debian 7 32 bit
-* Debian 7 64 bit
-* OpenVZ only
 
 
 ## Description
@@ -75,14 +43,9 @@ Tested on
 * speedtest-cli (https://github.com/sivel/speedtest-cli)
 * bench-network.sh
 * user-login.sh
-* user-limit.sh
-* user-expire.sh
-
-## Reference
-* http://blog.jualssh.com/
-* http://blog.jualssh.com/2014/01/centos6-automatic-script-installer/
-* http://blog.jualssh.com/2014/01/debian6-sh-automatic-script-installer/
-* http://blog.jualssh.com/2014/01/debian7-sh-automatic-script-installer/
+* create-user.sh
+* user-delete.sh
+* cekuser.sh
 
 Openvpn
 wget https://raw.github.com/arieonline/autoscript/master/dimas.debian
