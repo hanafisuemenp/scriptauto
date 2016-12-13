@@ -26,9 +26,9 @@ bash dimas.debian
 * badvpn-udpgw port 7300
 
 ### What's features included
-* Webmin http(s)://[ip]:10000/
-* vnstat http://[ip]/vnstat/
-* MRTG http://[ip]/mrtg/
+* Webmin http(s)://IPVPS:10000/
+* vnstat http://IPVPS/vnstat/
+* MRTG http://IPVPS/mrtg/
 * Timezone : Asia/Jakarta
 * Fail2Ban : [on]
 * IPv6     : [off]
@@ -49,4 +49,4 @@ bash dimas.debian
 * user-login.sh
 * create-user.sh
 * user-delete.sh
-* cekuser.sh
+* cek-user.sh
