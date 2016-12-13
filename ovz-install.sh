@@ -63,7 +63,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.github.com/choirulanam217/script/master/conf/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<pre>Setup by Fawzya.Net</pre>" > /home/vps/public_html/index.html
+echo "<pre>Setup by Zihad</pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.github.com/choirulanam217/script/master/conf/vps.conf"
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
@@ -91,11 +91,11 @@ cd /etc/openvpn/
 wget -O /etc/openvpn/1194-client.ovpn "https://raw.github.com/choirulanam217/script/master/conf/1194-client.conf"
 sed -i $MYIP2 /etc/openvpn/1194-client.ovpn;
 PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
-useradd -M -s /bin/false Choirul
-echo "Choirul:$PASS" | chpasswd
-echo "Choirul" > pass.txt
+useradd -M -s /bin/false zihad
+echo "zihad:$PASS" | chpasswd
+echo "zihad" > pass.txt
 echo "$PASS" >> pass.txt
-tar cf client.tar 1194-client.ovpn pass.txt
+tar cf client.tar 1194-client.ovpn
 cp client.tar /home/vps/public_html/
 cd
 # install badvpn
@@ -169,22 +169,22 @@ rm /root/webmin_1.670_all.deb
 service webmin restart
 service vnstat restart
 
-# downlaod script
+# download script
 cd /usr/bin
 wget -O speedtest "https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py"
-curl http://script.fawzya.net/debian/user-login.sh > userlog
-curl http://script.fawzya.net/debian/user-expire.sh > userexpire
-curl http://script.fawzya.net/debian/user-list.sh > userlist
-curl http://script.fawzya.net/debian/create-user.sh > usernew
-curl http://script.fawzya.net/debian/trial.sh > trial
+curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-login.sh > userlog
+curl https://raw.githubusercontent.com/zihadp/scriptauto/master/debian/cekuser.sh > cekuser
+curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-delete.sh > userdel
+curl https://raw.githubusercontent.com/zihadp/scriptauto/master/create-user.sh > usernew
+curl https://raw.githubusercontent.com/zihadp/scriptauto/master/trial.sh > trial
 
 echo "cat /root/log-install.txt" | tee -a info
 
 
 chmod +x speedtest
 chmod +x userlog
-chmod +x userexpire
-chmod +x userlist
+chmod +x cekuser
+chmod +x userdel
 chmod +x usernew
 chmod +x trial
 chmod +x info
@@ -193,7 +193,7 @@ cd
 # setting cron
 service cron restart
 service cron stop
-echo "0 */12 * * * root /usr/bin/userexpire" > /etc/cron.d/user-expire
+echo "0 */12 * * * root /usr/bin/cekuser" > /etc/cron.d/cekuser
 echo "0 0 * * * root /usr/bin/reboot" > /etc/cron.d/reboot
 service cron start
 
@@ -213,32 +213,35 @@ service webmin restart
 
 # info
 clear
-echo "Informasi Penggunaan Script" | tee log-install.txt
-echo "===============================================" | tee -a log-install.txt
+echo "Setup Berhasil" | tee log-install.txt
+echo "------------------------------------------------------------" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Layanan Aktif"  | tee -a log-install.txt
-echo "-----------------------"  | tee -a log-install.txt
-echo "OpenVPN  : TCP 1194 (client config : http://$MYIP/client.tar)"  | tee -a log-install.txt
+echo "------------------------------------------------------------"  | tee -a log-install.txt
+echo "OpenVPN  : TCP 1194 (client config : http://$IP/client.tar)"  | tee -a log-install.txt
 echo "OpenSSH  : 22, 143"  | tee -a log-install.txt
 echo "Dropbear : 109, 110, 443"  | tee -a log-install.txt
 echo "Squid    : 8080 (limit to IP SSH)"  | tee -a log-install.txt
 echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
-echo "Webmin   : https://$MYIP:10000/"  | tee -a log-install.txt
-echo "vnstat   : http://$MYIP/vnstat/"  | tee -a log-install.txt
-echo "MRTG     : http://$MYIP/mrtg/"  | tee -a log-install.txt
+echo "Webmin   : https://$IP:10000/"  | tee -a log-install.txt
+echo "vnstat   : http://$IP/vnstat/"  | tee -a log-install.txt
+echo "MRTG     : http://$IP/mrtg/"  | tee -a log-install.txt
 echo "Timezone : Asia/Jakarta"  | tee -a log-install.txt
 echo "Fail2Ban : [on]"  | tee -a log-install.txt
 echo "IPv6     : [off]"  | tee -a log-install.txt
+echo "------------------------------------------------------------"  | tee -a log-install.txt
 
 echo ""  | tee -a log-install.txt
+echo "------------------------"  | tee -a log-install.txt
 echo "Script yang tersedia"  | tee -a log-install.txt
 echo "------------------------"  | tee -a log-install.txt
 echo "speedtest --share"  | tee -a log-install.txt
 echo "usernew"  | tee -a log-install.txt
-echo "userlist"  | tee -a log-install.txt
+echo "userdel"  | tee -a log-install.txt
+echo "cekuser"  | tee -a log-install.txt
 echo "userlog"  | tee -a log-install.txt
 echo "trial"  | tee -a log-install.txt
 
-echo "----------"  | tee -a log-install.txt
+echo "------------------------"  | tee -a log-install.txt
 
 reboot
