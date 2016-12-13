@@ -1,6 +1,4 @@
-Automatic Script Setting VPS untuk berjualan ssh
-
-==========
+Automatic Script Setting VPS untuk berjualan ssh dan vpn
 
 ## How To Use
 
@@ -11,6 +9,12 @@ wget -O ovz-install.sh https://raw.githubusercontent.com/zihadp/scriptauto/maste
 Tested on
 * Debian 7 32 bit
 
+### OpenVPN
+```
+wget https://raw.github.com/arieonline/autoscript/master/dimas.debian
+bash dimas.debian
+
+```
 
 ## Description
 
@@ -46,7 +50,3 @@ Tested on
 * create-user.sh
 * user-delete.sh
 * cekuser.sh
-
-Openvpn
-wget https://raw.github.com/arieonline/autoscript/master/dimas.debian
-bash dimas.debian
