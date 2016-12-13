@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "----------------------------------- Cek User -----------------------------------"
 echo "" > /root/infouser.txt
 echo "" > /root/expireduser.txt
 echo "" > /home/vps/public_html/status
