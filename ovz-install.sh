@@ -172,10 +172,10 @@ service vnstat restart
 # download script
 cd /usr/bin
 wget -O speedtest-cli "https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py"
-wget -O ps_mem "https://raw.githubusercontent.com/pixelb/ps_mem/master/ps_mem.py"
+wget -O ps-mem "https://raw.githubusercontent.com/pixelb/ps_mem/master/ps_mem.py"
 wget -O bench-network.sh "https://raw.githubusercontent.com/zihadp/scriptauto/master/bench-network.sh"
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-login.sh > userlog
-curl https://raw.githubusercontent.com/zihadp/scriptauto/master/debian/cekuser.sh > cekuser
+curl https://raw.githubusercontent.com/zihadp/scriptauto/master/debian/cek-user.sh > cekuser
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-delete.sh > userdel
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/create-user.sh > usernew
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/trial.sh > trial
@@ -189,7 +189,7 @@ chmod +x cekuser
 chmod +x userdel
 chmod +x usernew
 chmod +x trial
-chmod +x ps_mem
+chmod +x ps-mem
 chmod +x bench-network
 chmod +x info
 cd
@@ -240,6 +240,8 @@ echo "------------------------"  | tee -a log-install.txt
 echo "Script yang tersedia"  | tee -a log-install.txt
 echo "------------------------"  | tee -a log-install.txt
 echo "speedtest-cli --share"  | tee -a log-install.txt
+echo "ps-mem"  | tee -a log-install.txt
+echo "benc-network"  | tee -a log-install.txt
 echo "usernew"  | tee -a log-install.txt
 echo "userdel"  | tee -a log-install.txt
 echo "cekuser"  | tee -a log-install.txt
