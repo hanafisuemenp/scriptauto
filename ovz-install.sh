@@ -176,8 +176,8 @@ wget -O ps-mem "https://raw.githubusercontent.com/pixelb/ps_mem/master/ps_mem.py
 wget -O bench-network.sh "https://raw.githubusercontent.com/zihadp/scriptauto/master/bench-network.sh"
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-login.sh > userlog
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/cek-user.sh > cekuser
-curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-del.sh > userdel
-curl https://raw.githubusercontent.com/zihadp/scriptauto/master/create-user.sh > usernew
+curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-del.sh > hapusakun
+curl https://raw.githubusercontent.com/zihadp/scriptauto/master/create-user.sh > buatakun
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/trial.sh > trial
 
 echo "cat /root/log-install.txt" | tee -a info
@@ -186,8 +186,8 @@ echo "cat /root/log-install.txt" | tee -a info
 chmod +x speedtest-cli
 chmod +x userlog
 chmod +x cekuser
-chmod +x userdel
-chmod +x usernew
+chmod +x hapusakun
+chmod +x buatakun
 chmod +x trial
 chmod +x ps-mem
 chmod +x bench-network
