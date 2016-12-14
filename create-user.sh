@@ -1,7 +1,6 @@
 #!/bin/bash
-#Script Auto Create User
+#Script Auto Create User, Modified by Zihad
 echo "---------------------------- Buat Akun ----------------------------"
-echo ""
 echo ""
 read -p "Username : " Login
 read -p "Password : " Pass
@@ -15,7 +14,8 @@ echo -e "----------------------------"
 echo -e "Data Login:"
 echo -e "----------------------------"
 echo -e "Host/IP : $IP "
-echo -e "Dropbear Port : 443"
+echo -e "Dropbear Port : 443, 110, 109"
+echo -e "Squid Proxy : 8080"
 echo -e "Username : $Login"
 echo -e "Password : $Pass"
 echo -e "Aktif Sampai : $exp "
