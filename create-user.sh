@@ -1,5 +1,6 @@
 #!/bin/bash
 #Script Auto Create User, Modified by Zihad
+clear
 echo "---------------------------- Buat Akun ----------------------------"
 echo ""
 read -p "Username : " Login
