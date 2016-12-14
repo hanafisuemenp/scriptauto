@@ -173,7 +173,7 @@ service vnstat restart
 cd /usr/bin
 wget -O speedtest-cli "https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py"
 wget -O ps-mem "https://raw.githubusercontent.com/pixelb/ps_mem/master/ps_mem.py"
-wget -O bench-network.sh "https://raw.githubusercontent.com/zihadp/scriptauto/master/bench-network.sh"
+wget -O bench-network "https://raw.githubusercontent.com/zihadp/scriptauto/master/bench-network.sh"
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-login.sh > userlog
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/cek-user.sh > cekuser
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-del.sh > hapusakun
