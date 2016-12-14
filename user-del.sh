@@ -1,4 +1,5 @@
 #!/bin/bash
+#Script Delete Akun Modified by Zihad
 echo "---------------------------- Hapus Akun ----------------------------"
 echo ""
 echo ""
@@ -21,6 +22,7 @@ userdel $Login
 echo ""
 echo "Akun $Login berhasil dihapus"
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+echo ""
 echo "--------------------------------"
 echo "Jumlah akun: $JUMLAH user"
 echo "--------------------------------"
