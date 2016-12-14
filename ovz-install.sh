@@ -219,17 +219,16 @@ service webmin restart
 clear
 echo "Setup Berhasil" | tee log-install.txt
 echo "------------------------------------------------------------" | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
 echo "Layanan Aktif"  | tee -a log-install.txt
 echo "------------------------------------------------------------"  | tee -a log-install.txt
-echo "OpenVPN  : TCP 1194 (client config : http://$IP/client.tar)"  | tee -a log-install.txt
+echo "OpenVPN  : TCP 1194 (client config : http://$MYIP/client.tar)"  | tee -a log-install.txt
 echo "OpenSSH  : 22, 143"  | tee -a log-install.txt
 echo "Dropbear : 109, 110, 443"  | tee -a log-install.txt
 echo "Squid    : 8080 (limit to IP SSH)"  | tee -a log-install.txt
 echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
-echo "Webmin   : https://$IP:10000/"  | tee -a log-install.txt
-echo "vnstat   : http://$IP/vnstat/"  | tee -a log-install.txt
-echo "MRTG     : http://$IP/mrtg/"  | tee -a log-install.txt
+echo "Webmin   : https://$MYIP:10000/"  | tee -a log-install.txt
+echo "vnstat   : http://$MYIP/vnstat/"  | tee -a log-install.txt
+echo "MRTG     : http://$MYIP/mrtg/"  | tee -a log-install.txt
 echo "Timezone : Asia/Jakarta"  | tee -a log-install.txt
 echo "Fail2Ban : [on]"  | tee -a log-install.txt
 echo "IPv6     : [off]"  | tee -a log-install.txt
