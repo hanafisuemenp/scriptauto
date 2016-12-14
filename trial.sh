@@ -1,7 +1,7 @@
 #!/bin/bash
 #Script auto create trial user SSH
 #yg akan expired setelah 1 hari
-
+#Modified by Zihad
 
 
 Login=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
@@ -15,7 +15,8 @@ echo -e "----------------------------"
 echo -e "Data Login:"
 echo -e "----------------------------"
 echo -e "Host/IP : $IP "
-echo -e "Dropbear Port : 443"
+echo -e "Dropbear Port : 443, 110, 109"
+echo -e "Squid Proxy : 8080"
 echo -e "Username : $Login"
 echo -e "Password : $Pass"
 echo -e "Aktif Sampai : $exp "
