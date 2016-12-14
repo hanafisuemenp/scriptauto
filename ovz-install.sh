@@ -241,8 +241,8 @@ echo "------------------------"  | tee -a log-install.txt
 echo "speedtest-cli --share"  | tee -a log-install.txt
 echo "ps-mem"  | tee -a log-install.txt
 echo "benc-network"  | tee -a log-install.txt
-echo "usernew"  | tee -a log-install.txt
-echo "userdel"  | tee -a log-install.txt
+echo "buatakun"  | tee -a log-install.txt
+echo "hapusakun"  | tee -a log-install.txt
 echo "cekuser"  | tee -a log-install.txt
 echo "userlog"  | tee -a log-install.txt
 echo "trial"  | tee -a log-install.txt
