@@ -175,8 +175,8 @@ wget -O speedtest-cli "https://raw.githubusercontent.com/sivel/speedtest-cli/mas
 wget -O ps-mem "https://raw.githubusercontent.com/pixelb/ps_mem/master/ps_mem.py"
 wget -O bench-network.sh "https://raw.githubusercontent.com/zihadp/scriptauto/master/bench-network.sh"
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-login.sh > userlog
-curl https://raw.githubusercontent.com/zihadp/scriptauto/master/debian/cek-user.sh > cekuser
-curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-delete.sh > userdel
+curl https://raw.githubusercontent.com/zihadp/scriptauto/master/cek-user.sh > cekuser
+curl https://raw.githubusercontent.com/zihadp/scriptauto/master/user-del.sh > userdel
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/create-user.sh > usernew
 curl https://raw.githubusercontent.com/zihadp/scriptauto/master/trial.sh > trial
 
