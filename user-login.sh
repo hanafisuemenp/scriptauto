@@ -3,7 +3,7 @@
 #
 # ========================
 #
-
+clear
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 echo "--------------------------------------";
 echo "Checking user login...";
