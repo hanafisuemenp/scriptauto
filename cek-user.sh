@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 echo "----------------------------------- Cek User -----------------------------------"
 echo "" > /root/infouser.txt
 echo "" > /root/expireduser.txt
