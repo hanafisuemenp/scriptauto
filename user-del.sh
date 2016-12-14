@@ -1,5 +1,6 @@
 #!/bin/bash
 #Script Delete Akun Modified by Zihad
+clear
 echo "---------------------------- Hapus Akun ----------------------------"
 echo ""
 echo ""
